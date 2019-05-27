@@ -16,6 +16,8 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import HelpIcon from "@material-ui/icons/Help";
+import AssignmentIcon from "@material-ui/icons/Assignment";
+import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import OutlinedFlag from "@material-ui/icons/OutlinedFlag";
 import InsertEmoticon from "@material-ui/icons/InsertEmoticon";
 
@@ -98,7 +100,21 @@ function PersistentDrawerRight() {
             </ListItemIcon>
             <ListItemText primary="Todas as Batalhas" />
           </ListItem>
+          <Divider />
           <ListItem button key={3}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Sugerir Batalha" />
+          </ListItem>
+          <ListItem button key={4}>
+            <ListItemIcon>
+              <AssignmentIndIcon />
+            </ListItemIcon>
+            <ListItemText primary="Sugerir Personagem" />
+          </ListItem>
+          <Divider />
+          <ListItem button key={5}>
             <ListItemIcon>
               <HelpIcon />
             </ListItemIcon>

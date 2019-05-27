@@ -7,7 +7,6 @@ const useStyles = makeStyles({
     width: props.width,
     float: props.float,
     background: "yellow",
-    padding: "5px",
     height: "30px",
   }),
 });
@@ -76,7 +75,7 @@ export default Battle;
 
 const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
   const width =
-    ((battleChallanger.health_point * 0.99) /
+    ((battleChallanger.health_point * 0.9) /
       battleChallanger.max_health_point) *
     100;
   const props = {
@@ -94,9 +93,9 @@ const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
 const Fighters = ({ battleChallangers = [] }) => (
   <div className="battle-fighters">
     {battleChallangers.map(x => (
-      <div>
-        <b key={x.id}>#{x.hashtags}</b>
-        <img className="image-fluid" src="./img/coxinha.png" />
+      <div key={x.id}>
+        <div className="hashtag">#{x.hashtags}</div>
+        <img alt="personagem" src="./img/coxinha.png" />
       </div>
     ))}
   </div>

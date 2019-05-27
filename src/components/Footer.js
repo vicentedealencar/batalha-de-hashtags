@@ -6,7 +6,7 @@ class Footer extends Component {
       <footer>
         Batalha de Hashtags
         <div className="grow" />
-        v1.0
+        2019 | v 1.0
       </footer>
     );
   }
