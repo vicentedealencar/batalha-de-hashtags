@@ -7389,6 +7389,7 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
+<<<<<<< HEAD
 react-transition-group@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.0.1.tgz#8cb8d58763e259da465385bb83b3b41b3ecba629"
@@ -7397,6 +7398,8 @@ react-transition-group@^4.0.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+=======
+>>>>>>> cbe5f6c06df8dc0f0f9d3bef2d5cd9f686b4b8db
 react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
