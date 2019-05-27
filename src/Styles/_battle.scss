@@ -1,0 +1,23 @@
+.battle-container {
+  width: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.battle-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.battle-fighters {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.battle-audience {
+  display: flex;
+  justify-content: space-evenly;
+}

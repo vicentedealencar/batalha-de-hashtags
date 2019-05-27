@@ -1,0 +1,12 @@
+header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height: 50px;
+  font-family: $font-2;
+  padding-left: 15px;
+}
