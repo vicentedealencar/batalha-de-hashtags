@@ -18,15 +18,3 @@ h5,
 h6 {
   font-family: $font-2;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-main {
-  text-align: center;
-  min-height: calc(100vh - 100px);
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}

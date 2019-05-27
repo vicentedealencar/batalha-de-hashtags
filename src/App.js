@@ -8,7 +8,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <main>
+      <main className="content">
         <Battle />
       </main>
       <Footer />
