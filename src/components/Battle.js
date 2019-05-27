@@ -1,5 +1,18 @@
 import React, { useEffect, useState } from "react";
 
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import clsx from "clsx";
+
+const useStyles = makeStyles({
+  life: props => ({
+    width: props.width,
+    float: props.float,
+    background: "yellow",
+    padding: "5px",
+    height: "30px",
+  }),
+});
+
 const useActiveBattle = () => {
   const [activeBattle, setActiveBattle] = useState(null);
 
@@ -37,7 +50,17 @@ const Battle = () => {
 
   return (
     <div className="battle-container">
-      <LifeBars battleChallangers={activeBattle.battleChallangers} />
+      <div className="battle-top">
+        <LifeBar
+          floatPosition="right"
+          battleChallanger={activeBattle.battleChallangers[0]}
+        />
+        <div className="battle-ko">KO</div>
+        <LifeBar
+          floatPosition="left"
+          battleChallanger={activeBattle.battleChallangers[1]}
+        />
+      </div>
       <h3>#{activeBattle.hashtags}</h3>
       <h2>{activeBattle.name}</h2>
       <Fighters battleChallangers={activeBattle.battleChallangers} />
@@ -50,15 +73,25 @@ const Battle = () => {
 
 export default Battle;
 
-const LifeBars = ({ battleChallangers = [] }) => (
-  <div className="battle-top">
-    {battleChallangers.map(x => (
-      <p key={x.id}>
-        hp: {x.health_point}/{x.max_health_point}
-      </p>
-    ))}
-  </div>
-);
+const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
+  console.log(battleChallanger);
+  const width =
+    ((battleChallanger.health_point * 0.99) /
+      battleChallanger.max_health_point) *
+    100;
+  const props = {
+    width: width + "%",
+    float: floatPosition,
+  };
+  const classes = useStyles(props);
+  return (
+    <div className="lifebar">
+      <div className={classes.life}>
+        {/* hp: {battleChallanger.health_point}/{battleChallanger.max_health_point} */}
+      </div>
+    </div>
+  );
+};
 
 const Fighters = ({ battleChallangers = [] }) => (
   <div className="battle-fighters">

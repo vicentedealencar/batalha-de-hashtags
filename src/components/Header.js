@@ -47,7 +47,7 @@ function PersistentDrawerRight() {
       <AppBar elevation={0}>
         <Toolbar>
           <Typography variant="h6" noWrap className="header-title">
-            Direita vs Esquerda
+            Batalha de Hashtags
           </Typography>
           <IconButton
             color="inherit"

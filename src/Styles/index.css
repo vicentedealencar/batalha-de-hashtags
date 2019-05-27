@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   min-width: 320px;
-  background: yellow; }
+  background: #ffd800 !important; }
 
 h1,
 h2,
@@ -18,10 +18,10 @@ h6 {
 
 .content {
   text-align: center;
-  min-height: calc(100vh - 114px);
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row; }
+  display: flex; }
+
+.grow {
+  flex-grow: 1; }
 
 .header-title {
   flex-grow: 1;
@@ -38,6 +38,7 @@ footer {
   align-items: center;
   justify-content: left;
   padding-left: 15px;
+  padding-right: 15px;
   background-color: #282c34;
   color: #fff;
   font-family: "Luckiest Guy";
@@ -45,6 +46,7 @@ footer {
 
 .battle-container {
   width: 100%;
+  padding: 1rem 0;
   justify-content: space-between;
   align-content: space-between;
   align-items: stretch;
@@ -53,7 +55,8 @@ footer {
 
 .battle-top {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 48px; }
 
 .battle-fighters {
   display: flex;
@@ -62,3 +65,23 @@ footer {
 .battle-audience {
   display: flex;
   justify-content: space-evenly; }
+
+.lifebar {
+  border: 4px solid #fff;
+  padding: 0px;
+  background: #ba5563;
+  width: 100%;
+  margin: 10px 1% 0px 10px;
+  border-radius: 0px 10px 10px 0px; }
+
+.lifebar:first-child {
+  margin: 10px 10px 0px 1%;
+  border-radius: 10px 0px 0px 10px; }
+
+.battle-ko {
+  font-family: "Bangers";
+  font-size: 55px;
+  transform: rotate(5deg);
+  text-shadow: 2px 3px 0px #ba5563;
+  color: yellow;
+  margin-top: -1.25vh; }
