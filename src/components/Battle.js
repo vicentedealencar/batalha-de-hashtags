@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   life: props => ({
@@ -61,10 +60,12 @@ const Battle = () => {
           battleChallanger={activeBattle.battleChallangers[1]}
         />
       </div>
-      <h3>#{activeBattle.hashtags}</h3>
-      <h2>{activeBattle.name}</h2>
+      <div className="battle-info">
+        <div className="battle-hashtag">#{activeBattle.hashtags}</div>
+        <div className="battle-name">{activeBattle.name}</div>
+        <div className="battle-content">{activeBattle.content}</div>
+      </div>
       <Fighters battleChallangers={activeBattle.battleChallangers} />
-      <p>{activeBattle.content}!</p>
       <Audience tweets={tweetCountByChallenger(activeBattle)} />
       {/* <Timeline /> */}
     </div>
@@ -74,7 +75,6 @@ const Battle = () => {
 export default Battle;
 
 const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
-  console.log(battleChallanger);
   const width =
     ((battleChallanger.health_point * 0.99) /
       battleChallanger.max_health_point) *
@@ -86,9 +86,7 @@ const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
   const classes = useStyles(props);
   return (
     <div className="lifebar">
-      <div className={classes.life}>
-        {/* hp: {battleChallanger.health_point}/{battleChallanger.max_health_point} */}
-      </div>
+      <div className={classes.life} />
     </div>
   );
 };
@@ -96,7 +94,10 @@ const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
 const Fighters = ({ battleChallangers = [] }) => (
   <div className="battle-fighters">
     {battleChallangers.map(x => (
-      <b key={x.id}>#{x.hashtags}</b>
+      <div>
+        <b key={x.id}>#{x.hashtags}</b>
+        <img className="image-fluid" src="./img/coxinha.png" />
+      </div>
     ))}
   </div>
 );

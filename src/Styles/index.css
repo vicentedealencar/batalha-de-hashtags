@@ -18,10 +18,15 @@ h6 {
 
 .content {
   text-align: center;
+  min-height: calc(100vh - 114px);
   display: flex; }
 
 .grow {
   flex-grow: 1; }
+
+.image-fluid {
+  max-width: 100%;
+  padding: 50px; }
 
 .header-title {
   flex-grow: 1;
@@ -31,7 +36,7 @@ h6 {
   display: flex; }
 
 .drawer-paper {
-  width: 240px; }
+  width: 280px; }
 
 footer {
   display: flex;
@@ -82,6 +87,17 @@ footer {
   font-family: "Bangers";
   font-size: 55px;
   transform: rotate(5deg);
+  margin-top: -1.25vh;
   text-shadow: 2px 3px 0px #ba5563;
-  color: yellow;
-  margin-top: -1.25vh; }
+  color: yellow; }
+
+.battle-hashtag {
+  font-family: "Bangers";
+  font-size: 60px;
+  text-shadow: 2px 3px 0px yellow;
+  color: #ba5563; }
+
+.battle-info .battle-name {
+  font-size: 40px;
+  text-shadow: 2px 3px 0px #ba5563;
+  color: yellow; }

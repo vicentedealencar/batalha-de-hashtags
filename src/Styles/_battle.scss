@@ -41,7 +41,24 @@
   font-family: $font-3;
   font-size: 55px;
   transform: rotate(5deg);
+  margin-top: -1.25vh;
   text-shadow: 2px 3px 0px rgba(#ba5563, 1);
   color: yellow;
-  margin-top: -1.25vh;
+}
+
+.battle-hashtag {
+  font-family: $font-3;
+  font-size: 60px;
+  text-shadow: 2px 3px 0px rgba(yellow, 1);
+  color: #ba5563;
+}
+
+.battle-info {
+  .battle-name {
+    font-size: 40px;
+    text-shadow: 2px 3px 0px rgba(#ba5563, 1);
+    color: yellow;
+  }
+  .battle-content {
+  }
 }

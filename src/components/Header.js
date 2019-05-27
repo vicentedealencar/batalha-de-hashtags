@@ -15,8 +15,9 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import HelpIcon from "@material-ui/icons/Help";
+import OutlinedFlag from "@material-ui/icons/OutlinedFlag";
+import InsertEmoticon from "@material-ui/icons/InsertEmoticon";
 
 const useStyles = makeStyles(theme => ({
   drawerHeader: {
@@ -25,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     padding: "0 8px",
     ...theme.mixins.toolbar,
     justifyContent: "flex-start",
+  },
+  appBar: {
+    background: "#282c34",
   },
 }));
 
@@ -44,7 +48,7 @@ function PersistentDrawerRight() {
   return (
     <div className="header">
       <CssBaseline />
-      <AppBar elevation={0}>
+      <AppBar elevation={0} className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap className="header-title">
             Batalha de Hashtags
@@ -82,14 +86,24 @@ function PersistentDrawerRight() {
         </div>
         <Divider />
         <List>
-          {["Personagens", "Batalhas", "Sobre"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button key={1}>
+            <ListItemIcon>
+              <InsertEmoticon />
+            </ListItemIcon>
+            <ListItemText primary="Todos os Personagens" />
+          </ListItem>
+          <ListItem button key={2}>
+            <ListItemIcon>
+              <OutlinedFlag />
+            </ListItemIcon>
+            <ListItemText primary="Todas as Batalhas" />
+          </ListItem>
+          <ListItem button key={3}>
+            <ListItemIcon>
+              <HelpIcon />
+            </ListItemIcon>
+            <ListItemText primary="Sobre o Projeto" />
+          </ListItem>
         </List>
       </Drawer>
     </div>
