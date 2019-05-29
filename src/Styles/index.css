@@ -50,6 +50,23 @@ h6 {
 .drawer-paper {
   width: 230px; }
 
+.header-desktop {
+  display: none; }
+
+@media screen and (min-width: 768px) {
+  .header-desktop {
+    display: inline-block; } }
+
+.header-desktop .navlink {
+  color: #fff; }
+
+.header-mobile {
+  display: inline-block; }
+
+@media screen and (min-width: 768px) {
+  .header-mobile {
+    display: none; } }
+
 footer {
   display: flex;
   align-items: center;
@@ -152,3 +169,6 @@ footer {
   text-shadow: 2px 3px 0px #ba5563;
   color: yellow;
   font-family: "Bangers"; }
+
+.button {
+  text-transform: capitalize !important; }

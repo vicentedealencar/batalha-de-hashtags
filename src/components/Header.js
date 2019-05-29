@@ -22,6 +22,7 @@ import AssignmentIcon from "@material-ui/icons/Assignment";
 // import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import OutlinedFlag from "@material-ui/icons/OutlinedFlag";
 import InsertEmoticon from "@material-ui/icons/InsertEmoticon";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   drawerHeader: {
@@ -59,15 +60,44 @@ function PersistentDrawerRight() {
               Batalha de Hashtags
             </NavLink>
           </Typography>
-          <IconButton
-            color="inherit"
-            aria-label="Open drawer"
-            edge="end"
-            onClick={handleDrawerOpen}
-            className={clsx(open && classes.hide)}
-          >
-            <MenuIcon />
-          </IconButton>
+          <div className="header-desktop">
+            <Button color="inherit" className="button">
+              <NavLink to={"/"} className="navlink">
+                Home
+              </NavLink>
+            </Button>
+            <Button color="inherit" className="button">
+              <NavLink to={"/instrucoes"} className="navlink">
+                Instruções
+              </NavLink>
+            </Button>
+            <Button color="inherit" className="button">
+              <NavLink to={"/batalhas"} className="navlink">
+                Batalhas
+              </NavLink>
+            </Button>
+            <Button color="inherit" className="button">
+              <NavLink to={"/personagens"} className="navlink">
+                Personagens
+              </NavLink>
+            </Button>
+            <Button color="inherit" className="button">
+              <NavLink to={"/sobre"} className="navlink">
+                Sobre
+              </NavLink>
+            </Button>
+          </div>
+          <div className="header-mobile">
+            <IconButton
+              color="inherit"
+              aria-label="Open drawer"
+              edge="end"
+              onClick={handleDrawerOpen}
+              className={clsx(open && classes.hide)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <main>

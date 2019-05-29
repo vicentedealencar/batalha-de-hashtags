@@ -11,3 +11,19 @@
 .drawer-paper {
   width: 230px;
 }
+
+.header-desktop {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+  .navlink {
+    color: #fff;
+  }
+}
+.header-mobile {
+  display: inline-block;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
