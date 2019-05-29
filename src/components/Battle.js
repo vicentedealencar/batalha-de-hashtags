@@ -121,7 +121,7 @@ const Fighters = ({ battleChallangers, hastagBattle, slug }) => {
             />
           </div>
           <div className="fighter-image">
-            {i === 0 && <img alt="personagem" src="./img/mortadela.png" />}
+            {i === 0 && <img alt="personagem" src="./img/sanduiche.gif" />}
             {i === 1 && <img alt="personagem" src="./img/coxinha.gif" />}
           </div>
         </div>

@@ -26,7 +26,8 @@ p {
 .content {
   text-align: center;
   min-height: calc(100vh - 114px);
-  display: flex; }
+  display: flex;
+  overflow: hidden; }
 
 .content-pages {
   text-align: left;
@@ -96,7 +97,6 @@ footer {
   justify-content: space-evenly; }
 
 .battle-fighters img {
-  max-height: 40vh;
   max-width: 100%; }
 
 .battle-fighters .twitter-share {
@@ -119,6 +119,9 @@ footer {
 @media screen and (min-width: 768px) {
   .battle-fighters .hashtag {
     display: inline-block; } }
+
+.battle-fighters .fighter-image {
+  max-height: 520px; }
 
 .battle-audience {
   display: flex;

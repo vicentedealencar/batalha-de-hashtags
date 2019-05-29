@@ -19,7 +19,6 @@
   display: flex;
   justify-content: space-evenly;
   img {
-    max-height: 40vh;
     max-width: 100%;
   }
   .twitter-share {
@@ -40,6 +39,9 @@
     @media screen and (min-width: 768px) {
       display: inline-block;
     }
+  }
+  .fighter-image {
+    max-height: 520px;
   }
 }
 
