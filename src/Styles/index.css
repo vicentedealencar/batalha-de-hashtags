@@ -66,14 +66,20 @@ footer {
 
 .battle-fighters img {
   max-height: 40vh;
-  max-width: 100%;
-  padding: 30px; }
+  max-width: 100%; }
+
+.battle-fighters .twitter-share {
+  display: inline-block;
+  margin: auto 20px;
+  top: 3px;
+  position: relative; }
 
 .battle-fighters .hashtag {
   text-shadow: 2px 3px 0px yellow;
   color: #282c34;
   font-size: 30px;
-  font-family: "Bangers"; }
+  font-family: "Bangers";
+  display: inline-block; }
 
 .battle-audience {
   display: flex;

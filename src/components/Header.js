@@ -90,35 +90,41 @@ function PersistentDrawerRight() {
         <List>
           <ListItem button key={1}>
             <ListItemIcon>
+              <HelpIcon />
+            </ListItemIcon>
+            <ListItemText primary="Instruções" />
+          </ListItem>
+          <ListItem button key={2}>
+            <ListItemIcon>
+              <HelpIcon />
+            </ListItemIcon>
+            <ListItemText primary="Sobre o Projeto" />
+          </ListItem>
+          <Divider />
+          <ListItem button key={3}>
+            <ListItemIcon>
               <InsertEmoticon />
             </ListItemIcon>
             <ListItemText primary="Todos os Personagens" />
           </ListItem>
-          <ListItem button key={2}>
+          <ListItem button key={4}>
             <ListItemIcon>
               <OutlinedFlag />
             </ListItemIcon>
             <ListItemText primary="Todas as Batalhas" />
           </ListItem>
           <Divider />
-          <ListItem button key={3}>
+          <ListItem button key={5}>
             <ListItemIcon>
               <AssignmentIcon />
             </ListItemIcon>
             <ListItemText primary="Sugerir Batalha" />
           </ListItem>
-          <ListItem button key={4}>
+          <ListItem button key={6}>
             <ListItemIcon>
               <AssignmentIndIcon />
             </ListItemIcon>
             <ListItemText primary="Sugerir Personagem" />
-          </ListItem>
-          <Divider />
-          <ListItem button key={5}>
-            <ListItemIcon>
-              <HelpIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sobre o Projeto" />
           </ListItem>
         </List>
       </Drawer>

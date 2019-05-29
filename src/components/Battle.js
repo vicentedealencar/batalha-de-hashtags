@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { makeStyles } from "@material-ui/core/styles";
+import { TwitterShareButton } from "react-twitter-embed";
 
 const useStyles = makeStyles({
   life: props => ({
@@ -64,7 +64,11 @@ const Battle = () => {
         <div className="battle-name">{activeBattle.name}</div>
         <div className="battle-content">{activeBattle.content}</div>
       </div>
-      <Fighters battleChallangers={activeBattle.battleChallangers} />
+      <Fighters
+        battleChallangers={activeBattle.battleChallangers}
+        slug={activeBattle.slug}
+        hastagBattle={activeBattle.hashtags}
+      />
       <Audience tweets={tweetCountByChallenger(activeBattle)} />
       {/* <Timeline /> */}
     </div>
@@ -74,10 +78,12 @@ const Battle = () => {
 export default Battle;
 
 const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
-  const width =
-    ((battleChallanger.health_point * 0.9) /
-      battleChallanger.max_health_point) *
-    100;
+  let width =
+    (battleChallanger.health_point / battleChallanger.max_health_point) * 100;
+
+  if (width > 99.9) {
+    width = 95;
+  }
   const props = {
     width: width + "%",
     float: floatPosition,
@@ -90,16 +96,32 @@ const LifeBar = ({ battleChallanger, floatPosition = [] }) => {
   );
 };
 
-const Fighters = ({ battleChallangers = [] }) => (
-  <div className="battle-fighters">
-    {battleChallangers.map(x => (
-      <div key={x.id}>
-        <div className="hashtag">#{x.hashtags}</div>
-        <img alt="personagem" src="./img/coxinha.png" />
-      </div>
-    ))}
-  </div>
-);
+const Fighters = ({ battleChallangers, hastagBattle, slug }) => {
+  return (
+    <div className="battle-fighters">
+      {battleChallangers.map((x, i) => (
+        <div key={x.id}>
+          <div className="hashtag">#{x.hashtags}</div>
+          <div className="twitter-share">
+            <TwitterShareButton
+              url={window.location.href}
+              options={{
+                text: "#" + hastagBattle + " #" + x.hashtags,
+                // via: "saurabhnemade",
+                size: "large",
+                // screenName: "Clique aqui para compartilhar",
+              }}
+            />
+          </div>
+          <div className="fighter-image">
+            {i === 0 && <img alt="personagem" src="./img/mortadela.png" />}
+            {i === 1 && <img alt="personagem" src="./img/coxinha.png" />}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Audience = ({ tweets = [] }) => (
   <div className="battle-audience">

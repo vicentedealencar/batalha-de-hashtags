@@ -21,13 +21,19 @@
   img {
     max-height: 40vh;
     max-width: 100%;
-    padding: 30px;
+  }
+  .twitter-share {
+    display: inline-block;
+    margin: auto 20px;
+    top: 3px;
+    position: relative;
   }
   .hashtag {
     text-shadow: 2px 3px 0px rgba(yellow, 1);
     color: #282c34;
     font-size: 30px;
     font-family: $font-3;
+    display: inline-block;
   }
 }
 
