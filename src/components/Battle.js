@@ -22,7 +22,7 @@ const useActiveBattle = () => {
       );
       const battles = await result.json();
       const activeBattle = battles.find(x => x.active);
-      console.log(activeBattle);
+      // console.log(activeBattle);
       if (!ignore) {
         setActiveBattle(activeBattle);
       }

@@ -66,14 +66,14 @@
 
 .battle-hashtag {
   font-family: $font-3;
-  font-size: 60px;
+  font-size: 50px;
   text-shadow: 2px 3px 0px rgba(yellow, 1);
   color: #ba5563;
 }
 
 .battle-info {
   .battle-name {
-    font-size: 40px;
+    font-size: 35px;
     text-shadow: 2px 3px 0px rgba(#ba5563, 1);
     color: yellow;
     font-family: $font-3;
@@ -81,7 +81,7 @@
   .battle-content {
     margin-bottom: 10px;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     text-shadow: 1px 1px 1px #000;
   }
 }

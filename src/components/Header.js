@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -16,8 +17,9 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import HelpIcon from "@material-ui/icons/Help";
+import HomeIcon from "@material-ui/icons/Home";
 import AssignmentIcon from "@material-ui/icons/Assignment";
-import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
+// import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import OutlinedFlag from "@material-ui/icons/OutlinedFlag";
 import InsertEmoticon from "@material-ui/icons/InsertEmoticon";
 
@@ -53,7 +55,9 @@ function PersistentDrawerRight() {
       <AppBar elevation={0} className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap className="header-title">
-            Batalha de Hashtags
+            <NavLink to={"/"} className="navlink">
+              Batalha de Hashtags
+            </NavLink>
           </Typography>
           <IconButton
             color="inherit"
@@ -88,44 +92,63 @@ function PersistentDrawerRight() {
         </div>
         <Divider />
         <List>
-          <ListItem button key={1}>
-            <ListItemIcon>
-              <HelpIcon />
-            </ListItemIcon>
-            <ListItemText primary="Instruções" />
-          </ListItem>
-          <ListItem button key={2}>
-            <ListItemIcon>
-              <HelpIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sobre o Projeto" />
-          </ListItem>
-          <Divider />
-          <ListItem button key={3}>
-            <ListItemIcon>
-              <InsertEmoticon />
-            </ListItemIcon>
-            <ListItemText primary="Todos os Personagens" />
-          </ListItem>
-          <ListItem button key={4}>
-            <ListItemIcon>
-              <OutlinedFlag />
-            </ListItemIcon>
-            <ListItemText primary="Todas as Batalhas" />
-          </ListItem>
-          <Divider />
-          <ListItem button key={5}>
-            <ListItemIcon>
-              <AssignmentIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sugerir Batalha" />
-          </ListItem>
-          <ListItem button key={6}>
-            <ListItemIcon>
-              <AssignmentIndIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sugerir Personagem" />
-          </ListItem>
+          <NavLink to={"/"} className="navlink">
+            <ListItem button key={1}>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </NavLink>
+          <NavLink to={"/instrucoes"} className="navlink">
+            <ListItem button key={1}>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <ListItemText primary="Instruções" />
+            </ListItem>
+          </NavLink>
+          <NavLink to={"/batalhas"} className="navlink">
+            <ListItem button key={4}>
+              <ListItemIcon>
+                <OutlinedFlag />
+              </ListItemIcon>
+              <ListItemText primary="Batalhas" />
+            </ListItem>
+          </NavLink>
+          <NavLink to={"/personagens"} className="navlink">
+            <ListItem button key={3}>
+              <ListItemIcon>
+                <InsertEmoticon />
+              </ListItemIcon>
+              <ListItemText primary="Personagens" />
+            </ListItem>
+          </NavLink>
+          <NavLink to={"/sobre"} className="navlink">
+            <ListItem button key={2}>
+              <ListItemIcon>
+                <HelpIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sobre" />
+            </ListItem>
+          </NavLink>
+          {/* <Divider />
+          <NavLink to={"/sugerir-batalha"} className="navlink">
+            <ListItem button key={5}>
+              <ListItemIcon>
+                <AssignmentIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sugerir Batalha" />
+            </ListItem>
+          </NavLink>
+          <NavLink to={"/sugerir-personagem"} className="navlink">
+            <ListItem button key={6}>
+              <ListItemIcon>
+                <AssignmentIndIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sugerir Personagem" />
+            </ListItem>
+          </NavLink> */}
         </List>
       </Drawer>
     </div>

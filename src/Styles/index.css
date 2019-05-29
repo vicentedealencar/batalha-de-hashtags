@@ -23,6 +23,17 @@ h6 {
   min-height: calc(100vh - 114px);
   display: flex; }
 
+.content-pages {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.content-pages p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  text-shadow: 1px 0px 0px white; }
+
 .grow {
   flex-grow: 1; }
 
@@ -30,11 +41,14 @@ h6 {
   flex-grow: 1;
   font-family: "Luckiest Guy" !important; }
 
+.header-title a {
+  color: #fff; }
+
 .header {
   display: flex; }
 
 .drawer-paper {
-  width: 280px; }
+  width: 230px; }
 
 footer {
   display: flex;
@@ -107,12 +121,12 @@ footer {
 
 .battle-hashtag {
   font-family: "Bangers";
-  font-size: 60px;
+  font-size: 50px;
   text-shadow: 2px 3px 0px yellow;
   color: #ba5563; }
 
 .battle-info .battle-name {
-  font-size: 40px;
+  font-size: 35px;
   text-shadow: 2px 3px 0px #ba5563;
   color: yellow;
   font-family: "Bangers"; }
@@ -120,5 +134,21 @@ footer {
 .battle-info .battle-content {
   margin-bottom: 10px;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   text-shadow: 1px 1px 1px #000; }
+
+.navlink {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87); }
+
+.title {
+  font-family: "Bangers";
+  font-size: 50px;
+  text-shadow: 2px 3px 0px yellow;
+  color: #ba5563; }
+
+.title-2 {
+  font-size: 35px;
+  text-shadow: 2px 3px 0px #ba5563;
+  color: yellow;
+  font-family: "Bangers"; }
