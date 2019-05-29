@@ -18,6 +18,11 @@ h5,
 h6 {
   font-family: "Luckiest Guy"; }
 
+p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  text-shadow: 1px 0px 0px white; }
+
 .content {
   text-align: center;
   min-height: calc(100vh - 114px);
@@ -28,11 +33,6 @@ h6 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 30px; }
-
-.content-pages p {
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.87);
-  text-shadow: 1px 0px 0px white; }
 
 .grow {
   flex-grow: 1; }
@@ -100,17 +100,25 @@ footer {
   max-width: 100%; }
 
 .battle-fighters .twitter-share {
-  display: inline-block;
   margin: auto 20px;
   top: 3px;
-  position: relative; }
+  position: relative;
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .battle-fighters .twitter-share {
+    display: inline-block; } }
 
 .battle-fighters .hashtag {
   text-shadow: 2px 3px 0px yellow;
   color: #282c34;
   font-size: 30px;
   font-family: "Bangers";
-  display: inline-block; }
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .battle-fighters .hashtag {
+    display: inline-block; } }
 
 .battle-audience {
   display: flex;
@@ -138,15 +146,23 @@ footer {
 
 .battle-hashtag {
   font-family: "Bangers";
-  font-size: 50px;
+  font-size: 30px;
   text-shadow: 2px 3px 0px yellow;
   color: #ba5563; }
 
+@media screen and (min-width: 426px) {
+  .battle-hashtag {
+    font-size: 50px; } }
+
 .battle-info .battle-name {
-  font-size: 35px;
+  font-size: 25px;
   text-shadow: 2px 3px 0px #ba5563;
   color: yellow;
   font-family: "Bangers"; }
+
+@media screen and (min-width: 426px) {
+  .battle-info .battle-name {
+    font-size: 35px; } }
 
 .battle-info .battle-content {
   margin-bottom: 10px;
@@ -172,3 +188,28 @@ footer {
 
 .button {
   text-transform: capitalize !important; }
+
+.avatar-container {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 15px; }
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #ba5563;
+  box-shadow: 2px 4px 0px yellow; }
+
+.avatar .title {
+  font-size: 26px;
+  margin: 10px auto 0; }
+
+.avatar .role {
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 0px #000; }

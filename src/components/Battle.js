@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TwitterShareButton } from "react-twitter-embed";
+import Loading from "./Loading";
 
 const useStyles = makeStyles({
   life: props => ({
@@ -44,7 +45,12 @@ const useActiveBattle = () => {
 const Battle = () => {
   const activeBattle = useActiveBattle();
 
-  if (!activeBattle) return <p>loading...</p>;
+  if (!activeBattle)
+    return (
+      <div className="battle-container">
+        <Loading />
+      </div>
+    );
 
   return (
     <div className="battle-container">

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 // import { NavLink } from "react-router-dom";
+import Avatar from "../../components/Avatar";
 
 class About extends Component {
   render() {
     return (
       <div className="content-pages">
-        <h1 className="title">Sobre</h1>
+        <h1 className="title">História</h1>
         <p>
           Primeiro eu queria cumprimentar os internautas. -Oi Internautas!
           Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao
@@ -19,12 +20,24 @@ class About extends Component {
           -Jornalista: Coloca esse dinheiro na poupança que a senhora ganha R$10
           mil por mês. -Dilma: O que que é R$10 mil?
         </p>
-        <p>
-          A população ela precisa da Zona Franca de Manaus, porque na Zona
-          franca de Manaus, não é uma zona de exportação, é uma zona para o
-          Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é
-          altamente lucravito. Derrubar arvores da natureza é muito lucrativo!
-        </p>
+        <h1 className="title">Criadores</h1>
+        <div className="avatar-container">
+          <Avatar
+            name="Miguel Medeiros"
+            pic="miguelmedeiros.jpg"
+            role="Desenvolvedor Full-Stack"
+          />
+          <Avatar
+            name="Don Ancapone"
+            pic="miguelmedeiros.jpg"
+            role="Designer 3D"
+          />
+          <Avatar
+            name="Vicente"
+            pic="vicente.png"
+            role="Desenvolvedor Front-End"
+          />
+        </div>
       </div>
     );
   }

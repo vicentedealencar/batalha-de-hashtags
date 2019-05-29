@@ -25,3 +25,9 @@ h5,
 h6 {
   font-family: $font-2;
 }
+
+p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  text-shadow: 1px 0px 0px rgba(#fff, 1);
+}

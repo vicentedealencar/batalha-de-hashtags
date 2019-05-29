@@ -23,17 +23,23 @@
     max-width: 100%;
   }
   .twitter-share {
-    display: inline-block;
     margin: auto 20px;
     top: 3px;
     position: relative;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+    }
   }
   .hashtag {
     text-shadow: 2px 3px 0px rgba(yellow, 1);
     color: #282c34;
     font-size: 30px;
     font-family: $font-3;
-    display: inline-block;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+    }
   }
 }
 
@@ -66,17 +72,23 @@
 
 .battle-hashtag {
   font-family: $font-3;
-  font-size: 50px;
+  font-size: 30px;
   text-shadow: 2px 3px 0px rgba(yellow, 1);
   color: #ba5563;
+  @media screen and (min-width: 426px) {
+    font-size: 50px;
+  }
 }
 
 .battle-info {
   .battle-name {
-    font-size: 35px;
+    font-size: 25px;
     text-shadow: 2px 3px 0px rgba(#ba5563, 1);
     color: yellow;
     font-family: $font-3;
+    @media screen and (min-width: 426px) {
+      font-size: 35px;
+    }
   }
   .battle-content {
     margin-bottom: 10px;
