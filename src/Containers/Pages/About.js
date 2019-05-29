@@ -38,6 +38,13 @@ class About extends Component {
             role="Desenvolvedor Front-End"
           />
         </div>
+        <h1 className="title">Contribua</h1>
+        <p>
+          Eu dou dinheiro pra minha filha. Eu dou dinheiro pra ela viajar, então
+          é... é... Já vivi muito sem dinheiro, já vivi muito com dinheiro.
+          -Jornalista: Coloca esse dinheiro na poupança que a senhora ganha R$10
+          mil por mês. -Dilma: O que que é R$10 mil?
+        </p>
       </div>
     );
   }

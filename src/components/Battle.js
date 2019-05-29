@@ -19,7 +19,8 @@ const useActiveBattle = () => {
     let ignore = false;
     const fetchData = async () => {
       const result = await fetch(
-        "https://direita-vs-esquerda-api.herokuapp.com/api/v1/battles"
+        // "https://direita-vs-esquerda-api.herokuapp.com/api/v1/battles"
+        "http://localhost:3333/api/v1/battles"
       );
       const battles = await result.json();
       const activeBattle = battles.find(x => x.active);
@@ -121,7 +122,7 @@ const Fighters = ({ battleChallangers, hastagBattle, slug }) => {
           </div>
           <div className="fighter-image">
             {i === 0 && <img alt="personagem" src="./img/mortadela.png" />}
-            {i === 1 && <img alt="personagem" src="./img/coxinha.png" />}
+            {i === 1 && <img alt="personagem" src="./img/coxinha.gif" />}
           </div>
         </div>
       ))}
