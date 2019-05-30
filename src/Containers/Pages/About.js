@@ -25,18 +25,14 @@ class About extends Component {
           <Avatar
             name="Miguel Medeiros"
             pic="miguelmedeiros.jpg"
-            role="Desenvolvedor Full-Stack"
+            role="Desenvolvedor"
           />
           <Avatar
-            name="Don Ancapone"
-            pic="miguelmedeiros.jpg"
+            name="Vinicius Girotto"
+            pic="viniciusgirotto.png"
             role="Designer 3D"
           />
-          <Avatar
-            name="Vicente"
-            pic="vicente.png"
-            role="Desenvolvedor Front-End"
-          />
+          <Avatar name="Vicente" pic="vicente.png" role="Desenvolvedor" />
         </div>
         <h1 className="title">Contribua</h1>
         <p>
