@@ -32,7 +32,11 @@ class About extends Component {
             pic="viniciusgirotto.png"
             role="Designer 3D"
           />
-          <Avatar name="Vicente" pic="vicente.png" role="Desenvolvedor" />
+          <Avatar
+            name="Vicente de Alencar"
+            pic="vicente.png"
+            role="Desenvolvedor"
+          />
         </div>
         <h1 className="title">Contribua</h1>
         <p>
