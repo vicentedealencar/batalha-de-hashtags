@@ -12,6 +12,14 @@ const useStyles = makeStyles({
   }),
 });
 
+const preloadImg = src => new Promise((resolve, reject) => {
+  const img = new Image();
+  img.onload = () => resolve()
+  img.onerror = () => reject()
+  img.src = src
+})
+
+
 const useActiveBattle = () => {
   const [activeBattle, setActiveBattle] = useState(null);
 
@@ -25,6 +33,10 @@ const useActiveBattle = () => {
       const battles = await result.json();
       const activeBattle = battles.find(x => x.active);
       // console.log(activeBattle);
+      // const srcs = activeBattle.battleChallangers.map(x => x.actual_image_src)
+      const srcs = ["./img/sanduiche.gif", "./img/coxinha.gif"]
+      await Promise.all(srcs.map(preloadImg))
+
       if (!ignore) {
         setActiveBattle(activeBattle);
       }
